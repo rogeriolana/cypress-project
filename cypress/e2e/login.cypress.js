@@ -1,11 +1,13 @@
+
 describe('Testes de Login na Loja EBAC', () => {
+    const perfil = require('../fixtures/perfil.json')
   beforeEach(() => {
       cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/');
   });
 
-  it('Deve fazer login com sucesso', () => {
-      cy.get('#username').type('aluno@ebac@teste.com');
-      cy.get('#password').type('teste@teste.com');
+  it.only('Deve fazer login com sucesso', () => {
+      cy.get('#username').type(perfil.usuario);
+      cy.get('#password').type(perfil.senha);
       cy.get('.woocommerce-form > .button').click();
       cy.get('.page-title').should('contain', 'Minha conta');
      

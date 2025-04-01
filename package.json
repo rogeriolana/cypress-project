@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rogeriolana/cypress-project/issues"
   },
-  "homepage": "https://github.com/rogeriolana/cypress-project#readme"
+  "homepage": "https://github.com/rogeriolana/cypress-project#readme",
+  "dependencies": {
+    "cypress-project": "file:"
+  }
 }
